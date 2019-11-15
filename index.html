@@ -232,7 +232,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zayfen.com/2019/11/12/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://zayfen.com/2019/11/13/a43fd1c509d10e4d08fc1f789d58cb23/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -246,7 +246,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2019/11/12/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+            <a href="/2019/11/13/a43fd1c509d10e4d08fc1f789d58cb23/" class="post-title-link" itemprop="url">Git 常用操作</a>
         </h2>
 
         <div class="post-meta">
@@ -256,22 +256,29 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-11-13 13:10:25" itemprop="dateCreated datePublished" datetime="2019-11-13T13:10:25+08:00">2019-11-13</time>
+              <time title="创建时间：2019-11-14 00:00:00" itemprop="dateCreated datePublished" datetime="2019-11-14T00:00:00+08:00">2019-11-14</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-15 14:11:28" itemprop="dateModified" datetime="2019-11-15T14:11:28+08:00">2019-11-15</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/web/" itemprop="url" rel="index">
-                    <span itemprop="name">web</span>
+                  <a href="/categories/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
                   </a>
                 </span>
             </span>
 
           
-            <span id="/2019/11/12/hello-world/" class="post-meta-item leancloud_visitors" data-flag-title="Hello World" title="阅读次数">
+            <span id="/2019/11/13/a43fd1c509d10e4d08fc1f789d58cb23/" class="post-meta-item leancloud_visitors" data-flag-title="Git 常用操作" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -288,10 +295,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
+          <p><img src="https://res.cloudinary.com/zayfen/image/upload/v1568171685/img/l8yeyxvtfw6kplg1ci67.png" alt="git flow"></p><h3 id="漂亮打印git-log"><a href="#漂亮打印git-log" class="headerlink" title="漂亮打印git log"></a>漂亮打印git log</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> --graph --pretty=format:<span class="string">'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'</span> --abbrev-commit --date=relative</span><br></pre></td></tr></table></figure><h3 id="添加修改或者新文件到待commit队列"><a href="#添加修改或者新文件到待commit队列" class="headerlink" title="添加修改或者新文件到待commit队列"></a>添加修改或者新文件到待commit队列</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### add 的文件是支持正则匹配的</span></span><br><span class="line">git add &lt;file(s)&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">### add all changes to commiter queue</span></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"><span class="comment">### 查看某个commit的修改内容</span></span><br><span class="line">git show &lt;commit-id&gt;</span><br><span class="line">git diff &lt;commit-id&gt;^!</span><br><span class="line"><span class="comment">##### e.g. git show d34ff657f5   git diff d34ff657f5^!</span></span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"><span class="comment">### 提交已添加的文件到本地仓库并创建一个新的版本</span></span><br><span class="line">```sh</span><br><span class="line">git commit -m <span class="string">"commit message"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### also can combine git add &amp; git commit in one command</span></span><br><span class="line">git commit -m <span class="string">"commit message"</span> -a</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2019/11/12/hello-world/#more" rel="contents">
+              <a class="btn" href="/2019/11/13/a43fd1c509d10e4d08fc1f789d58cb23/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
