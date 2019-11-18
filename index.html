@@ -228,6 +228,90 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zayfen.com/2019/11/18/bbc765cf2f120d4208792bc259324906/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="zayfen">
+      <meta itemprop="description" content="For Better Life...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z . A . Y . F . E . N">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/18/bbc765cf2f120d4208792bc259324906/" class="post-title-link" itemprop="url">布隆过滤（Bloom Filter）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-18 04:44:34 / 修改时间：05:08:52" itemprop="dateCreated datePublished" datetime="2019-11-18T04:44:34-05:00">2019-11-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">algorithm</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2019/11/18/bbc765cf2f120d4208792bc259324906/" class="post-meta-item leancloud_visitors" data-flag-title="布隆过滤（Bloom Filter）" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Bloom-Filter"><a href="#Bloom-Filter" class="headerlink" title="Bloom Filter"></a>Bloom Filter</h1><h1 id="1-什么是布隆过滤？"><a href="#1-什么是布隆过滤？" class="headerlink" title="1. 什么是布隆过滤？"></a>1. 什么是布隆过滤？</h1><p>布隆过滤是应用于大数据中检测一个数据是否在一个集合中的搜索过滤算法。</p><h1 id="2-应用场景"><a href="#2-应用场景" class="headerlink" title="2. 应用场景"></a>2. 应用场景</h1><p>比如如何在成千上万的网址中快速地识别出恶意的网址，在成千上万的邮件中快速识别出恶意的邮件等</p><h1 id="3-算法简单描述"><a href="#3-算法简单描述" class="headerlink" title="3. 算法简单描述"></a>3. 算法简单描述</h1><p>布隆过滤是在一个bitmap中预先通过k个hash函数插入一些目标数据标记，表示为下图：<br>假设这里的bitmap(所有的位都初始化为0)是有10个bits，有3个hash 函数，有一个目标数据“cat”，那么将cat映射标记到bitmap就是通过3个hash函数分别计算cat的hash值，将hash值转换成bitmap的索引，并将对应索引位置的bit置为1，至此，我们就标记了一个目标数据，目前cat就是我们要过滤的数据，当在很多的数据中要识别出“cat”的时候，就可以通过建立好的这个bitmap来识别了。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/11/18/bbc765cf2f120d4208792bc259324906/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://zayfen.com/2019/11/18/f97ef80c3fff95b1c02a4a937d666b66/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -379,7 +463,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="线性搜索"><a href="#线性搜索" class="headerlink" title="线性搜索"></a>线性搜索</h3><p>线性搜索也是最简单的搜索算法，简单来说，就是对一个数组或者顺序容器，进行从头到尾的遍历，一个一个的找到目标元素<br><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/Linear.png" alt="image"></p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 简单的线性搜索算法实现</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">linear_search</span><span class="params">(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;T&gt;&amp; vec, <span class="keyword">const</span> T&amp; x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> index = <span class="number">-1</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; element : vec) &#123;</span><br><span class="line">    index++;</span><br><span class="line">    <span class="keyword">if</span>(element == x) &#123;</span><br><span class="line">      <span class="keyword">return</span> index;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h3 id="线性搜索"><a href="#线性搜索" class="headerlink" title="线性搜索"></a>线性搜索</h3><p>线性搜索也是最简单的搜索算法，简单来说，就是对一个数组或者顺序容器，进行从头到尾的遍历，一个一个的找到目标元素<br><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/Linear.png" alt="image"><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 简单的线性搜索算法实现</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">linear_search</span><span class="params">(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;T&gt;&amp; vec, <span class="keyword">const</span> T&amp; x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> index = <span class="number">-1</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; element : vec) &#123;</span><br><span class="line">    index++;</span><br><span class="line">    <span class="keyword">if</span>(element == x) &#123;</span><br><span class="line">      <span class="keyword">return</span> index;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/11/18/b7d273159f6becc31fc5174ea7582c5e/#more" rel="contents">
@@ -711,7 +795,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -724,7 +808,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
