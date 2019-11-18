@@ -1332,7 +1332,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ed40bf;
+  background: #fff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2483,10 +2483,6 @@ ul.breadcrumb li + li:last-child {
 }
 .algolia-pagination .disabled-item {
   visibility: hidden;
-}
-.has-jax {
-  overflow-x: auto;
-  overflow-y: hidden;
 }
 .header {
   margin: 0 auto;
